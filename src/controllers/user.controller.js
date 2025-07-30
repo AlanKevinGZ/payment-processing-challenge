@@ -93,13 +93,6 @@ export const updatePassword = async (req, res) => {
     const { id } = req.params;
     const { newPassword } = req.body;
 
-    if (!newPassword || newPassword.length < 6) {
-      return sendResponse(res, {
-        status: 400,
-        message: 'La contraseña debe tener al menos 6 caracteres'
-      });
-    }
-
     const user = await User.findByPk(id);
     if (!user) {
       return sendResponse(res, {

@@ -7,7 +7,7 @@ export const authenticateToken = async (req, res, next) => {
     const token = authHeader?.split(' ')[1];
 
     if (!token) {
-      return res.status(401).json({ message: 'Token de acceso requerido' });
+      return res.status(401).json({ message: 'Token requerido' });
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
