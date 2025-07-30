@@ -19,7 +19,7 @@ Este proyecto es una prueba técnica enfocada en el desarrollo fullstack con Nod
 - `npm i`
 #### Correr el servidor:
 - `npm run dev`
-
+-  `npm run start`
 
 ---
 
