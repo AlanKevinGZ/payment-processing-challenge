@@ -33,7 +33,7 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-
+    
     const user = await User.findOne({ where: { email } });
     if (!user) {
       return sendResponse(res, {
@@ -58,7 +58,7 @@ export const login = async (req, res) => {
         user: excludePassword(user)
       }
     });
-
+   
   } catch (error) {
     handleErrorResponse(res, error);
   }
